@@ -2,15 +2,20 @@ const cootieCatcher = {};
 
 cootieCatcher.colorChoices = [`green`, `blue`, `red`, `yellow`];
 
-cootieCatcher.numberChoices = {
-    numberChoiceOne: [3, 5, 8, 10],
-    numberChoiceTwo: [4, 7, 11, 14]
-};
+cootieCatcher.numberChoices = [
+    [3, 5, 8, 10],
+    [4, 7, 11, 14]
+]
 
-cootieCatcher.finalAnswers = {
-    answerSetOne: [`Not likely`, `Definitely`, `The future is in your hands`, `Hell yes!`],
-    answerSetTwo: [`The future is murky`, `Hundo p`, `Your heart tells you no`, `Ha ha. Good one.`]
-}
+
+cootieCatcher.tabChoices = [
+    [`A`, `B`, `C`, `D`],
+    [`E`, `F`, `G`, `H`]
+]
+
+cootieCatcher.finalAnswers = [`Not likely`, `Definitely`, `The future is in your hands`, `Hell yes!`, `The future is murky`, `Hundo p`, `Your heart tells you no`, `Ha ha. Good one.`];
+
+
 
 // console.log(numberChoices.numberChoiceTwo);
 
@@ -29,29 +34,54 @@ cootieCatcher.smoothScroll = function (clickedElement) {
     });
 };
 
-cootieCatcher.forLoop = function (arraySelected) {
+
+cootieCatcher.forLoop = function (sectionToAppear, arraySelected) {
     for(let n = 0; n < 4; n++) {
-        $(`li:nth-of-type(${n+1}) .numberSquare`).text(`${arraySelected[n]}`);
+        $(`li:nth-of-type(${n+1}) ${sectionToAppear}`).text(`${arraySelected[n]}`);
     };
 };
 
-cootieCatcher.nextToShow = function (section) {
-    $(section).on(`click`, function() {
-        let selectedSquare = $(this).children(`div`).attr(`class`);
+cootieCatcher.nextToShow = function (sectionSquare) {
+    $(sectionSquare).on(`click`, function() {
+        let selectedSquare = ``;
+        let questionSection = ``;
+        let nextSection = ``;
+        
+        if (sectionSquare === `.colorSquare`) {
+            selectedSquare = $(this).children(`div`).attr(`class`);
+            questionSection = cootieCatcher.numberChoices;
+            nextSection = `.numberSquare`;
+        } else if (sectionSquare === `.numberSquare`) {
+            questionSection = cootieCatcher.tabChoices;
+            nextSection = `.tabSquare`;
+            if ($(this).text() % 2) {
+                selectedSquare = `even`;
+            }
+            else {
+                selectedSquare = `odd`;
+            }
+        };
+
         if (selectedSquare === `odd`) {
-            let numbersDisplayed = cootieCatcher.numberChoices.numberChoiceOne;
-            cootieCatcher.forLoop(numbersDisplayed);
+            let setDisplayed = questionSection[0];
+            cootieCatcher.forLoop(nextSection, setDisplayed);
         } else {
-            let numbersDisplayed = cootieCatcher.numberChoices.numberChoiceTwo;
-            cootieCatcher.forLoop(numbersDisplayed);
+            let setDisplayed = questionSection[1];
+            cootieCatcher.forLoop(nextSection, setDisplayed);
         };
         
     })
 };
 
-cootieCatcher.numberPick = function () {
-    
-}
+cootieCatcher.bigReveal = function () {
+    const cardIndex = Math.floor(Math.random() * 8);
+    $(`.tabSquare`).on(`click`, function() {
+        $(`.answerSection .wrapper`).html(`<h3 class="result">Your result: ${cootieCatcher.finalAnswers[cardIndex]} </h3>`);
+    })
+};
+
+
+
 
 
 
@@ -60,6 +90,8 @@ cootieCatcher.init = function () {
     cootieCatcher.smoothScroll(`.catcherSquare`);
     cootieCatcher.smoothScroll(`.startButton`);
     cootieCatcher.nextToShow(`.colorSquare`);
+    cootieCatcher.nextToShow(`.numberSquare`);
+    cootieCatcher.bigReveal();
 }
 
 $(document).ready(function() {

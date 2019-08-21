@@ -210,8 +210,12 @@ li {
   background: #A8BDCD;
 }
 
-a {
-  text-decoration: none;
+.tabSection {
+  background: #ffaeae;
+}
+
+.answerSection {
+  background: #F3D491;
 }
 
 header {
@@ -280,4 +284,8 @@ header {
   height: 50%;
   border-radius: 50%;
   background: #FF5D5D;
+}
+
+a {
+  text-decoration: none;
 }
