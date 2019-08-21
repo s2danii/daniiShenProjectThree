@@ -1,0 +1,25 @@
+
+ul {
+    display:flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid tomato;
+}
+
+li {
+    width: calc(50% - 16px);
+    height: calc(50% - 16px);
+    margin: 8px;
+    background:#F5F5F5;
+    box-shadow: 5px 5px 2px #C0C0C0 ;
+    border: 2px solid blue;
+    
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
