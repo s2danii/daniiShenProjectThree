@@ -183,10 +183,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   max-width: 1080px;
   width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 
 section {
   height: 100vh;
+  padding: 30px 0;
 }
 
 ul {
@@ -200,11 +202,23 @@ li {
   margin: 0;
 }
 
+.colorSection {
+  background: #9EC39E;
+}
+
+.numberSection {
+  background: #A8BDCD;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   height: 100vh;
 }
 
-ul {
+.cootieCatcher {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,21 +227,57 @@ ul {
   width: 400px;
   height: 400px;
   margin: 0 auto;
-  border: 2px solid tomato;
 }
 
-li {
+.cootieCatcher li {
   width: calc(50% - 16px);
   height: calc(50% - 16px);
   margin: 8px;
   background: #F5F5F5;
-  -webkit-box-shadow: 5px 5px 2px #C0C0C0;
-          box-shadow: 5px 5px 2px #C0C0C0;
-  border: 2px solid blue;
+  -webkit-box-shadow: 5px 5px 2px #999999;
+          box-shadow: 5px 5px 2px #999999;
 }
 
-a {
+.cootieCatcher li a {
   width: 100%;
   height: 100%;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: #333333;
+}
+
+.greenCircle div {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #4CA64C;
+}
+
+.blueCircle div {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #7DA9CA;
+}
+
+.yellowCircle div {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #F6D754;
+}
+
+.redCircle div {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #FF5D5D;
 }
