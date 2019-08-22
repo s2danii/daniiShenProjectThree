@@ -184,6 +184,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  padding: 10vh 0;
 }
 
 section {
@@ -240,6 +241,18 @@ footer p {
   margin: 0;
 }
 
+@media (max-height: 590px) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
 header {
   height: 100vh;
   background: #F4F4F4;
@@ -271,15 +284,33 @@ h1 span::before {
   z-index: -1;
 }
 
+@media (max-width: 780px) {
+  h1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    padding-bottom: 10vh;
+    font-size: 2.8rem;
+  }
+}
+
 .startButton, .restartButton {
   padding: 20px;
+  display: inline-block;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button {
   -webkit-box-shadow: 5px 5px 2px #999999;
           box-shadow: 5px 5px 2px #999999;
   border: 1px solid #333333;
   background: #F4F4F4;
-  color: #333333;
-  text-transform: uppercase;
-  font-weight: bold;
+  display: inline-block;
 }
 
 .cootieCatcher {
@@ -352,15 +383,31 @@ a {
 
 .answerSquare {
   width: 50%;
+  min-width: 300px;
   height: 200px;
   background: #F4F4F4;
   -webkit-box-shadow: 5px 5px 2px #999999;
           box-shadow: 5px 5px 2px #999999;
   margin: 0 auto;
+  margin-bottom: -20px;
   padding: 40px 30px;
 }
 
 .answerSquare .resultHeading {
   margin-bottom: 20px;
   font-weight: normal;
+}
+
+@media (max-height: 500px) {
+  .cootieCatcher {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cootieCatcher {
+    width: 285px;
+    height: 285px;
+  }
 }

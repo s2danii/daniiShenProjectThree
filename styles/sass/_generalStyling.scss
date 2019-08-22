@@ -5,6 +5,7 @@
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    padding: 10vh 0;
 }
 
 section {
@@ -66,6 +67,20 @@ footer {
     padding: 8px;
     p {
         margin: 0;
+    }
+}
+
+// MEDIA QUERIES START HERE
+
+@media(max-height: 590px) {
+    .wrapper {
+        padding: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    .wrapper {
+        width: 90%;
     }
 }
 

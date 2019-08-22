@@ -29,3 +29,19 @@ h1 span::before {
     right: 25%;
     z-index: -1;
 }
+
+// MEDIA QUERIES START HERE
+
+@media(max-width: 780px) {
+    h1 {
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+    h1 {
+        padding-bottom: 10vh;
+        font-size: 2.8rem;
+    }
+}
+
