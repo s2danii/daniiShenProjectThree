@@ -2,6 +2,7 @@
 
 // GENERAL SQUARE STYLING STARTS HERE
 
+
 .cootieCatcher {
     display:flex;
     flex-wrap: wrap;
@@ -14,8 +15,8 @@
         width: calc(50% - 16px);
         height: calc(50% - 16px);
         margin: 8px;
-        background:#F5F5F5;
-        box-shadow: 5px 5px 2px #999999;
+        background:$offWhite;
+        box-shadow: $dropShadow;
         // border: 2px solid blue;
     
         a {
@@ -63,6 +64,19 @@ a {
 
 
 
-// ANSWER CARD
+// ANSWER CARD STYLING STARTS HERE
+
+.answerSquare {
+    width: 50%;
+    height: 200px;
+    background: $offWhite;
+    box-shadow: $dropShadow;
+    margin: 0 auto;
+    padding: 40px 30px;
+    .resultHeading {
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+}
 
 

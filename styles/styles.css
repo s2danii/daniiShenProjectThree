@@ -202,6 +202,14 @@ li {
   margin: 0;
 }
 
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
 .colorSection {
   background: #9EC39E;
 }
@@ -218,8 +226,60 @@ li {
   background: #F3D491;
 }
 
+.answerSection .wrapper {
+  padding: 20vh 0;
+}
+
+footer {
+  background: #F4F4F4;
+  text-align: right;
+  padding: 8px;
+}
+
+footer p {
+  margin: 0;
+}
+
 header {
   height: 100vh;
+  background: #F4F4F4;
+}
+
+h1 {
+  font-size: 3rem;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20vh 0;
+  z-index: 10;
+  position: relative;
+}
+
+h1 span {
+  display: block;
+  position: relative;
+}
+
+h1 span::before {
+  content: '';
+  width: 50%;
+  height: 10px;
+  background: #7DA9CA;
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+  right: 25%;
+  z-index: -1;
+}
+
+.startButton, .restartButton {
+  padding: 20px;
+  -webkit-box-shadow: 5px 5px 2px #999999;
+          box-shadow: 5px 5px 2px #999999;
+  border: 1px solid #333333;
+  background: #F4F4F4;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .cootieCatcher {
@@ -237,7 +297,7 @@ header {
   width: calc(50% - 16px);
   height: calc(50% - 16px);
   margin: 8px;
-  background: #F5F5F5;
+  background: #F4F4F4;
   -webkit-box-shadow: 5px 5px 2px #999999;
           box-shadow: 5px 5px 2px #999999;
 }
@@ -288,4 +348,19 @@ header {
 
 a {
   text-decoration: none;
+}
+
+.answerSquare {
+  width: 50%;
+  height: 200px;
+  background: #F4F4F4;
+  -webkit-box-shadow: 5px 5px 2px #999999;
+          box-shadow: 5px 5px 2px #999999;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.answerSquare .resultHeading {
+  margin-bottom: 20px;
+  font-weight: normal;
 }

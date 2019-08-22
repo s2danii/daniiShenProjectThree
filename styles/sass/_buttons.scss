@@ -1,0 +1,10 @@
+
+.startButton, .restartButton {
+    padding: 20px;
+    box-shadow: $dropShadow;
+    border: 1px solid #333333;
+    background: $offWhite;
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: bold;
+}

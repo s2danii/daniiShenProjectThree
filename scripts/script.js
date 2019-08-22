@@ -13,18 +13,16 @@ cootieCatcher.tabChoices = [
     [`E`, `F`, `G`, `H`]
 ]
 
-cootieCatcher.finalAnswers = [`Not likely`, `Definitely`, `The future is in your hands`, `Hell yes!`, `The future is murky`, `Hundo p`, `Your heart tells you no`, `Ha ha. Good one.`];
+cootieCatcher.finalAnswers = [`Not likely...`, `The stars will align for you ⭐`, `The future is in your hands.`, `Hell yes.`, `Mars is in retrograde so things don't look good.`, `Hundo p 💯`, `I'm sorry, but no.`, `Ha ha. Good one.`, `The future is murky, please try again.`];
 
 
 
-// console.log(numberChoices.numberChoiceTwo);
-
-// SMOOTH SCROLL FUNCTION DEFINED
+// SMOOTH SCROLL FUNCTION DEFINED HERE
 cootieCatcher.smoothScroll = function (clickedElement) {
     $(clickedElement).on(`click`, function (event) {
         if(this.hash !== "") {
             event.preventDefault();
-            var hash = this.hash;
+            const hash = this.hash;
             $(`html, body`).animate({
                 scrollTop: $(hash).offset().top
             }, 800, function() {
@@ -34,13 +32,15 @@ cootieCatcher.smoothScroll = function (clickedElement) {
     });
 };
 
-
+// FUNCTION TO PRINT ARRAY ONTO SQUARES IN HTML DEFINED HERE
 cootieCatcher.forLoop = function (sectionToAppear, arraySelected) {
-    for(let n = 0; n < 4; n++) {
-        $(`li:nth-of-type(${n+1}) ${sectionToAppear}`).text(`${arraySelected[n]}`);
-    };
+    arraySelected.forEach(function (arrayItem, arrayIndex) {
+        $(`li:nth-of-type(${arrayIndex + 1}) ${sectionToAppear}`).text(`${arrayItem}`);
+    });
 };
 
+
+// FUNCTION TO DECIDE THE ARRAY TO POPULATE THE NEXT SECTION DEFINED HERE
 cootieCatcher.nextToShow = function (sectionSquare) {
     $(sectionSquare).on(`click`, function() {
         let selectedSquare = ``;
@@ -73,31 +73,44 @@ cootieCatcher.nextToShow = function (sectionSquare) {
     })
 };
 
+// FUNCTION TO PRINT FINAL ANSWER ON ANSWER CARD DEFINED HERE
 cootieCatcher.bigReveal = function () {
-    const cardIndex = Math.floor(Math.random() * 8);
     $(`.tabSquare`).on(`click`, function() {
-        $(`.answerSection .wrapper`).html(`<h3 class="result">Your result: ${cootieCatcher.finalAnswers[cardIndex]} </h3>`);
-    })
+        let cardIndex = Math.floor(Math.random() * 9);
+        console.log(cardIndex);
+        $(`.resultsAnswer`).html(`${cootieCatcher.finalAnswers[cardIndex]}`);
+    });
 };
 
+// RESTART FUNCTION DEFINED HERE
+cootieCatcher.restart = function () {
+    $(`.restartButton`).on(`click`, function(event) {
+        event.preventDefault();
+        $(`html, body`).animate({
+            scrollTop: $(`#startSection`).offset().top
+        }, 1000, function () {
+                location.hash = ``;
+                location.reload();
+        });
+    }
+)};
 
 
 
 
 
-// INIT FUNCTION DEFINED
+// INIT FUNCTION DEFINED HERE
 cootieCatcher.init = function () {
     cootieCatcher.smoothScroll(`.catcherSquare`);
     cootieCatcher.smoothScroll(`.startButton`);
     cootieCatcher.nextToShow(`.colorSquare`);
     cootieCatcher.nextToShow(`.numberSquare`);
     cootieCatcher.bigReveal();
+    // cootieCatcher.smoothScroll(`.restartButton`);
+    cootieCatcher.restart();
+    
 }
 
 $(document).ready(function() {
     cootieCatcher.init();
 });
-
-
-
-

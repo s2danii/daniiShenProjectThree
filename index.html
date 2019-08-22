@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
+    <header id="startSection">
         <div class="wrapper">
-            <h1>Revive your inner preteen with this virtual cootie catcher.</h1>
+            <h1>Revive your inner preteen with this virtual <span>cootie catcher</span></h1> 
             <a href="#colorSection" class="startButton">Think of a yes/no question and proceed</a>
         </div>
     </header>
@@ -21,22 +21,22 @@
                 
                     <ul class="cootieCatcher">
                         <li>
-                            <a href="#numberSection" class="catcherSquare colorSquare greenCircle">
+                            <a href="#numberSection" aria-label="green circle" class="catcherSquare colorSquare greenCircle">
                                 <div class="odd"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#numberSection" class="catcherSquare colorSquare yellowCircle">
+                            <a href="#numberSection" aria-label="yellow circle" class="catcherSquare colorSquare yellowCircle">
                                 <div class="even"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#numberSection" class="catcherSquare colorSquare blueCircle">
+                            <a href="#numberSection" aria-label="blue circle" class="catcherSquare colorSquare blueCircle">
                                 <div class="even"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#numberSection" class="catcherSquare colorSquare redCircle">
+                            <a href="#numberSection" aria-label="red circle" class="catcherSquare colorSquare redCircle">
                                 <div class="odd"></div>
                             </a>
                         </li>
@@ -46,7 +46,7 @@
         </section>
         <section class="numberSection" id="numberSection">
             <div class="wrapper">
-                <h2>2. Choose a number</h2>
+                <h2>2. Choose a number:</h2>
                 <ul class="cootieCatcher numberQuestion">
                     <li>
                         <a href="#tabSection" class="catcherSquare numberSquare"></a>
@@ -70,6 +70,7 @@
                 <h2>3. Flip over a tab to find your answer!</h2>
                 <ul class="cootieCatcher">
                     <li>
+                        
                         <a href="#answerSection" class="catcherSquare tabSquare"></a>
                         <!-- <div class="answerCard"></div> -->
                     </li>
@@ -87,12 +88,16 @@
         </section>
         <section class="answerSection" id="answerSection">
             <div class="wrapper">
-
+                <div class="answerSquare">
+                    <h3 class="resultHeading">And the answer is...</h3>
+                    <h3 class="resultsAnswer"></h3>
+                </div>
+                <a href="#startSection" class="restartButton">Ask another question</a>
             </div>
         </section>
     </main>
     <footer>
-        stuffbydanii
+        <p>stuffbydanii.</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="scripts/script.js"></script>
