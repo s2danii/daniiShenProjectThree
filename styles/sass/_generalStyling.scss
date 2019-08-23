@@ -48,19 +48,26 @@ h2 {
 // BACKGROUNDS
 
 .colorSection {
-    background: #9EC39E;
+    // background: #9EC39E;
+    background: url(images/greenBackground2.jpg);
+    background-size: cover;
 }
 
+
 .numberSection {
-    background: #A8BDCD;
+    // background: #A8BDCD;
+    background: url(images/blueBackground.jpg);
+    background-size: cover;
 }
 
 .tabSection {
-    background: #ffaeae;
+    // background: #ffaeae;
+    background: url(images/redBackground.jpg);
+    background-size: cover;
 }
 
 .answerSection {
-    background: url(images/yellowBackground2.jpg);
+    background: url(images/yellowBackground.jpg);
     background-size: cover;
 }
 
