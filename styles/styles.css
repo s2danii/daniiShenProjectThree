@@ -228,6 +228,7 @@ h1, h2, h3, h4 {
 h2 {
   margin-bottom: 5%;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .colorSection {
@@ -235,9 +236,17 @@ h2 {
   background-size: cover;
 }
 
+.colorSection h2 {
+  background: #9EC39E;
+}
+
 .numberSection {
   background: url(images/blueBackground.jpg);
   background-size: cover;
+}
+
+.numberSection h2 {
+  background: #A8BDCD;
 }
 
 .tabSection {
@@ -245,9 +254,17 @@ h2 {
   background-size: cover;
 }
 
+.tabSection h2 {
+  background: #FFAEAE;
+}
+
 .answerSection {
   background: url(images/yellowBackground2.jpg);
   background-size: cover;
+}
+
+.answerSection h2 {
+  background: #F3D491;
 }
 
 footer {
@@ -520,4 +537,46 @@ a {
   .cootieCatcher li a {
     font-size: 1.8rem;
   }
+}
+
+.cardScene {
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+
+.card {
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  width: 100%;
+  height: 100%;
+}
+
+.flipSquare {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.cardFront {
+  background: #F4F4F4;
+}
+
+.cardBack {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: #F4F4F4;
+}
+
+.card.isFlipped {
+  -webkit-transform: translateX(-100%) rotateY(-180deg);
+          transform: translateX(-100%) rotateY(-180deg);
 }

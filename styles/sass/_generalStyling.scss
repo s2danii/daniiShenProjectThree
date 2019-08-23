@@ -41,8 +41,7 @@ h1, h2, h3, h4 {
 h2 {
     margin-bottom: 5%;
     text-transform: uppercase;
-    // background: $offWhite;
-    // display: inline-block;
+    display: inline-block;
 }
 
 
@@ -53,6 +52,9 @@ h2 {
     // background: #9EC39E;
     background: url(images/greenBackground2.jpg);
     background-size: cover;
+    h2 {
+        background: $green;
+    }
 }
 
 
@@ -60,18 +62,27 @@ h2 {
     // background: #A8BDCD;
     background: url(images/blueBackground.jpg);
     background-size: cover;
+    h2 {
+        background: $blue;
+    }
 }
 
 .tabSection {
     // background: #ffaeae;
     background: url(images/redBackground.jpg);
     background-size: cover;
+    h2 {
+        background: $red;
+    }
 }
 
 .answerSection {
     // #F3D491
     background: url(images/yellowBackground2.jpg);
     background-size: cover;
+    h2 {
+        background: $yellow;
+    }
 }
 
 // FOOTER SECTION STYLING STARTS HERE
