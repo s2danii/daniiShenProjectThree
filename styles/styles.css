@@ -571,7 +571,7 @@ a {
 .cardBack {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background: #DEDEDE;
+  background: white;
 }
 
 .cardLeft.isFlipped {
