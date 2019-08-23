@@ -252,12 +252,12 @@ h2 {
 
 footer {
   background: #F4F4F4;
-  text-align: right;
   padding: 8px;
 }
 
 footer p {
   margin: 0;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 880px) {
