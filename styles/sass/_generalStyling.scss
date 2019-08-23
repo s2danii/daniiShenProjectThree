@@ -1,18 +1,27 @@
-
+html {
+    font-size: 125%;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #333333;
+}
 
 .wrapper {
     max-width: 1080px;
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 10vh 0;
 }
 
 section {
     height: 100vh;
     padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+a {
+    color: #333333;
+}
 
 ul {
     margin: 0;
@@ -30,7 +39,8 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-    margin: 10px 0;
+    margin-bottom: 5%;
+    text-transform: uppercase;
 }
 
 
@@ -50,13 +60,8 @@ h2 {
 }
 
 .answerSection {
-    background: #F3D491;
-}
-
-// ANSWER SECTION STYLING STARTS HERE
-
-.answerSection .wrapper {
-    padding: 20vh 0;
+    background: url(images/yellowBackground2.jpg);
+    background-size: cover;
 }
 
 // FOOTER SECTION STYLING STARTS HERE
@@ -72,11 +77,18 @@ footer {
 
 // MEDIA QUERIES START HERE
 
-@media(max-height: 590px) {
-    .wrapper {
-        padding: 0;
+
+
+// @media(max-height: 600px) {
+    
+// }
+
+@media(max-width: 880px) {
+    h2 {
+        font-size: 1.2rem;
     }
 }
+
 
 @media(max-width: 500px) {
     .wrapper {

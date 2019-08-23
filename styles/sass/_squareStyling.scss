@@ -6,10 +6,10 @@
 .cootieCatcher {
     display:flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 700px;
     margin: 0 auto;
-    // border: 2px solid tomato;
+    
 
     li {
         width: calc(50% - 16px);
@@ -17,7 +17,7 @@
         margin: 8px;
         background:$offWhite;
         box-shadow: $dropShadow;
-        // border: 2px solid blue;
+        
     
         a {
             width: 100%;
@@ -25,8 +25,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
-            color: #333333;
+            font-size: 3rem;
+            
+            font-family: 'Permanent Marker', cursive;
         }
     }
 }
@@ -41,7 +42,7 @@
 }
 
 .greenCircle div {
-    @include colorCircle(#4CA64C);
+    @include colorCircle(#6DB66D);
 }
 
 .blueCircle div {
@@ -63,43 +64,92 @@ a {
 }
 
 
-
 // ANSWER CARD STYLING STARTS HERE
 
 .answerSquare {
-    width: 50%;
+    width: 60%;
     min-width: 300px;
     height: 200px;
     background: $offWhite;
     box-shadow: $dropShadow;
     margin: 0 auto;
     margin-bottom: -20px;
-    padding: 40px 30px;
+    padding: 30px;
     .resultHeading {
         margin-bottom: 20px;
         font-weight: normal;
+        color: #595959;
+    }
+}
+
+// MEDIA QUERIES START HERE
+
+// MAX HEIGHT
+
+@media (max-height: 900px) {
+    .cootieCatcher {
+        width: 600px;
+        height: 600px;
     }
 }
 
 
+@media (max-height: 700px) {
+    .cootieCatcher {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+@media (max-height: 600px) {
+    .cootieCatcher {
+        width: 400px;
+        height: 400px;
+        li a {
+            font-size: 2.5rem;
+        }
+        
+    }
+}
 
 @media(max-height: 500px) {
     .cootieCatcher {
-        
         width: 300px;
         height: 300px;
-        
     }
 }
+
+// MAX WIDTH
+
+@media(max-width: 750px) and (min-height: 700px) {
+    .cootieCatcher {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media(max-width: 600px) and (min-height: 600px) {
+    .cootieCatcher {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    .answerSquare {
+        width: 75%;
+    }
+}
+
 
 @media(max-width: 500px) {
     .cootieCatcher {
         width: 285px;
         height: 285px;
-    }
-
-    .answerSquare {
-        
-    }
+        li a {
+            font-size: 1.8rem;
+        }
+    }   
 }
 

@@ -179,17 +179,35 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+html {
+  font-size: 125%;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #333333;
+}
+
 .wrapper {
   max-width: 1080px;
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  padding: 10vh 0;
 }
 
 section {
   height: 100vh;
   padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  color: #333333;
 }
 
 ul {
@@ -208,7 +226,8 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  margin: 10px 0;
+  margin-bottom: 5%;
+  text-transform: uppercase;
 }
 
 .colorSection {
@@ -224,11 +243,8 @@ h2 {
 }
 
 .answerSection {
-  background: #F3D491;
-}
-
-.answerSection .wrapper {
-  padding: 20vh 0;
+  background: url(images/yellowBackground2.jpg);
+  background-size: cover;
 }
 
 footer {
@@ -241,9 +257,9 @@ footer p {
   margin: 0;
 }
 
-@media (max-height: 590px) {
-  .wrapper {
-    padding: 0;
+@media (max-width: 880px) {
+  h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -259,7 +275,7 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   width: 600px;
   margin: 0 auto;
   padding: 20vh 0;
@@ -275,25 +291,44 @@ h1 span {
 h1 span::before {
   content: '';
   width: 50%;
-  height: 10px;
+  height: 15px;
   background: #7DA9CA;
   position: absolute;
-  bottom: 5px;
+  bottom: 8px;
   left: 25%;
   right: 25%;
   z-index: -1;
 }
 
-@media (max-width: 780px) {
+@media (max-height: 980px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h1 span::before {
+    bottom: 5px;
+  }
+}
+
+@media (max-height: 700px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h1 span::before {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 780px) and (min-height: 500px) {
   h1 {
     width: 100%;
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 500px) {
   h1 {
     padding-bottom: 10vh;
-    font-size: 2.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -313,14 +348,18 @@ h1 span::before {
   display: inline-block;
 }
 
+.button a {
+  font-size: 0.8rem;
+}
+
 .cootieCatcher {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
+  width: 700px;
+  height: 700px;
   margin: 0 auto;
 }
 
@@ -345,15 +384,15 @@ h1 span::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
-  color: #333333;
+  font-size: 3rem;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .greenCircle div {
   width: 50%;
   height: 50%;
   border-radius: 50%;
-  background: #4CA64C;
+  background: #6DB66D;
 }
 
 .blueCircle div {
@@ -382,7 +421,7 @@ a {
 }
 
 .answerSquare {
-  width: 50%;
+  width: 60%;
   min-width: 300px;
   height: 200px;
   background: #F4F4F4;
@@ -390,12 +429,37 @@ a {
           box-shadow: 5px 5px 2px #999999;
   margin: 0 auto;
   margin-bottom: -20px;
-  padding: 40px 30px;
+  padding: 30px;
 }
 
 .answerSquare .resultHeading {
   margin-bottom: 20px;
   font-weight: normal;
+  color: #595959;
+}
+
+@media (max-height: 900px) {
+  .cootieCatcher {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-height: 700px) {
+  .cootieCatcher {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-height: 600px) {
+  .cootieCatcher {
+    width: 400px;
+    height: 400px;
+  }
+  .cootieCatcher li a {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-height: 500px) {
@@ -405,9 +469,32 @@ a {
   }
 }
 
+@media (max-width: 750px) and (min-height: 700px) {
+  .cootieCatcher {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) and (min-height: 600px) {
+  .cootieCatcher {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .answerSquare {
+    width: 75%;
+  }
+}
+
 @media (max-width: 500px) {
   .cootieCatcher {
     width: 285px;
     height: 285px;
+  }
+  .cootieCatcher li a {
+    font-size: 1.8rem;
   }
 }

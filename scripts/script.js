@@ -78,7 +78,7 @@ cootieCatcher.bigReveal = function () {
     $(`.tabSquare`).on(`click`, function() {
         let cardIndex = Math.floor(Math.random() * 9);
         console.log(cardIndex);
-        $(`.resultsAnswer`).html(`${cootieCatcher.finalAnswers[cardIndex]}`);
+        $(`.resultsAnswer`).html(`"${cootieCatcher.finalAnswers[cardIndex]}"`);
     });
 };
 
