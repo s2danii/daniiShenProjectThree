@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    // background: $offWhite;
+    
     background: ((linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(images/crumpledPaper2.jpg)));
     background-size: cover;
 }
@@ -73,4 +73,12 @@ h1 span::before {
         font-size: 2rem;
     }
 }
+
+@media(max-width: 340px) {
+    h1 {
+        padding-top: 10vh;
+        
+    }
+}
+
 

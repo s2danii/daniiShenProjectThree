@@ -13,7 +13,7 @@ cootieCatcher.tabChoices = [
     [`E`, `F`, `G`, `H`]
 ]
 
-cootieCatcher.finalAnswers = [`Not likely...`, `The stars will align for you ⭐`, `The future is in your hands.`, `Hell yes.`, `Mars is in retrograde so things don't look good.`, `Hundo p 💯`, `I'm sorry, but no.`, `Ha ha. Good one.`, `The future is murky, please try again.`];
+cootieCatcher.finalAnswers = [`Not likely...🙄`, `The stars will align for you ⭐`, `The future is in your hands 👐`, `🔥 Hell yes 🔥`, `Mars is in retrograde so things don't look good.`, `Hundo p 💯`, `I'm sorry, but no.😬`, `Ha ha. Good one.`, `The future is murky, please try again. 🤔`, `Without a doubt - yes! 🎉`];
 
 
 
@@ -76,7 +76,7 @@ cootieCatcher.nextToShow = function (sectionSquare) {
 // FUNCTION TO PRINT FINAL ANSWER ON ANSWER CARD DEFINED HERE
 cootieCatcher.bigReveal = function () {
     $(`.tabSquare`).on(`click`, function() {
-        let cardIndex = Math.floor(Math.random() * 9);
+        let cardIndex = Math.floor(Math.random() * 10);
         console.log(cardIndex);
         $(`.resultsAnswer`).html(`"${cootieCatcher.finalAnswers[cardIndex]}"`);
     });

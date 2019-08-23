@@ -272,6 +272,12 @@ footer p {
   }
 }
 
+@media (max-width: 320px) {
+  .answerSection .wrapper {
+    width: 100%;
+  }
+}
+
 header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.7)), to(rgba(244, 244, 244, 0.7))), url(images/crumpledPaper2.jpg);
@@ -337,6 +343,12 @@ h1 span::before {
   }
 }
 
+@media (max-width: 340px) {
+  h1 {
+    padding-top: 10vh;
+  }
+}
+
 .startButton, .restartButton {
   padding: 20px;
   display: inline-block;
@@ -355,6 +367,12 @@ h1 span::before {
 
 .button a {
   font-size: 0.8rem;
+}
+
+@media (max-width: 320px) {
+  .startButton, .restartButton {
+    padding: 15px;
+  }
 }
 
 .cootieCatcher {

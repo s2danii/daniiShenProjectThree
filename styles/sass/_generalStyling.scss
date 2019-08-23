@@ -41,6 +41,8 @@ h1, h2, h3, h4 {
 h2 {
     margin-bottom: 5%;
     text-transform: uppercase;
+    // background: $offWhite;
+    // display: inline-block;
 }
 
 
@@ -101,6 +103,12 @@ footer {
 @media(max-width: 500px) {
     .wrapper {
         width: 90%;
+    }
+}
+
+@media(max-width: 320px) {
+    .answerSection .wrapper {
+        width: 100%;
     }
 }
 
