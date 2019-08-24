@@ -386,6 +386,10 @@ h1 span::before {
   font-size: 0.8rem;
 }
 
+a:focus {
+  background: #CAD7E1;
+}
+
 @media (max-width: 320px) {
   .startButton, .restartButton {
     padding: 15px;

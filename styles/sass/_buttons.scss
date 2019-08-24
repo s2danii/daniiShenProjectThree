@@ -17,6 +17,10 @@
     }
 }
 
+a:focus {
+    background: #CAD7E1;
+}
+
 @media(max-width: 320px) {
     .startButton, .restartButton {
         padding: 15px;

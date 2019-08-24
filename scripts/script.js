@@ -80,7 +80,7 @@ cootieCatcher.restart = function () {
 
 // CARD FLIP MAGIC DEFINED HERE
 cootieCatcher.flipSquares = function(sectiontoFlip) {
-        $(`${sectiontoFlip} .card`).toggleClass(`isFlipped`);
+        $(`${sectiontoFlip} .card`).addClass(`isFlipped`);
 
 };
 
@@ -100,19 +100,29 @@ cootieCatcher.smoothScroll = function (clickedElement) {
     });
 };
 
+// REFRESH FUNCTION TO CLEAR OUT HASH DEFINED HERE
+
+cootieCatcher.clearHash = function () {
+    $(window).unload(function () {
+        window.location.hash = ``;
+    });
+}
+
+
 
 // INIT FUNCTION DEFINED HERE
 cootieCatcher.init = function () {
     cootieCatcher.smoothScroll(`.catcherSquare`);
     cootieCatcher.smoothScroll(`.startButton`);
-    
     cootieCatcher.nextToShow(`.colorSquare`);
     cootieCatcher.nextToShow(`.numberSquare`);
     cootieCatcher.bigReveal();
     cootieCatcher.smoothScroll(`.restartButton`);
     cootieCatcher.restart();
-    
+    cootieCatcher.clearHash();
 }
+
+// DOCUMENT READY
 
 $(document).ready(function() {
     cootieCatcher.init();
