@@ -1,7 +1,7 @@
 header {
     height: 100vh;
     
-    background: ((linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(images/crumpledPaper2.jpg)));
+    background: ((linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(images/crumpledPaper.jpg)));
     background-size: cover;
 }
 
@@ -15,7 +15,6 @@ h1 {
     span {
         display: block;
         position: relative;
-        
     }
 }
 
@@ -53,6 +52,12 @@ h1 span::before {
 
     h1 span::before {
         bottom: 5px;
+    }
+}
+
+@media (max-height: 500px) {
+    h1 {
+        padding: 10vh 0;
     }
 }
 

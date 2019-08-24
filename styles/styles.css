@@ -232,7 +232,7 @@ h2 {
 }
 
 .colorSection {
-  background: url(images/greenBackground2.jpg);
+  background: url(images/greenBackground.jpg);
   background-size: cover;
 }
 
@@ -259,7 +259,7 @@ h2 {
 }
 
 .answerSection {
-  background: url(images/yellowBackground2.jpg);
+  background: url(images/yellowBackground.jpg);
   background-size: cover;
 }
 
@@ -297,8 +297,8 @@ footer p {
 
 header {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.7)), to(rgba(244, 244, 244, 0.7))), url(images/crumpledPaper2.jpg);
-  background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(images/crumpledPaper2.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.7)), to(rgba(244, 244, 244, 0.7))), url(images/crumpledPaper.jpg);
+  background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(images/crumpledPaper.jpg);
   background-size: cover;
 }
 
@@ -346,6 +346,12 @@ h1 span::before {
   }
 }
 
+@media (max-height: 500px) {
+  h1 {
+    padding: 10vh 0;
+  }
+}
+
 @media (max-width: 780px) and (min-height: 500px) {
   h1 {
     width: 100%;
@@ -388,6 +394,10 @@ h1 span::before {
 
 a:focus {
   background: #CAD7E1;
+}
+
+.startButton span {
+  color: #6b6b6b;
 }
 
 @media (max-width: 320px) {

@@ -12,6 +12,7 @@
     border: 1px solid #333333;
     background: $offWhite;
     display: inline-block;
+    
     a {
         font-size: 0.8rem;
     }
@@ -19,6 +20,10 @@
 
 a:focus {
     background: #CAD7E1;
+}
+
+.startButton span {
+    color: #6b6b6b
 }
 
 @media(max-width: 320px) {
