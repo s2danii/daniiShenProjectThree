@@ -265,7 +265,7 @@ h2 {
 
 .answerSection .userQuestion {
   background: #F3D491;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 
 footer {
@@ -373,7 +373,7 @@ h1 span::before {
   }
 }
 
-.startButton, .restartButton {
+.startButton, .restartButton, .startButtonMobile {
   padding: 20px;
   display: inline-block;
   color: #333333;

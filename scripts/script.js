@@ -121,12 +121,13 @@ cootieCatcher.startGame = function () {
 
 // FUNCTION TO PRINT USER QUESTION
 cootieCatcher.printQuestion = function (userQuestion) {
-    $(`.userQuestion`).html(`"${userQuestion}"`);
+    if (userQuestion !== ``) {
+        $(`.userQuestion`).html(`"${userQuestion}"`);
+    };
 };
 
 
 // REFRESH FUNCTION TO CLEAR OUT HASH DEFINED HERE
-
 cootieCatcher.clearHash = function () {
     $(window).unload(function () {
         window.location.hash = ``;
@@ -138,7 +139,7 @@ cootieCatcher.clearHash = function () {
 // INIT FUNCTION DEFINED HERE
 cootieCatcher.init = function () {
     cootieCatcher.smoothScroll(`.catcherSquare`);
-    // cootieCatcher.smoothScroll(`.startButton`);
+    cootieCatcher.smoothScroll(`.startButtonMobile`);
     cootieCatcher.startGame();
     cootieCatcher.nextToShow(`.colorSquare`);
     cootieCatcher.nextToShow(`.numberSquare`);
