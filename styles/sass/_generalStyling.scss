@@ -1,3 +1,5 @@
+// GENERAL PAGE STYLING STARTS HERE
+
 html {
     font-size: 125%;
     font-family: 'Lexend Deca', sans-serif;
@@ -45,11 +47,9 @@ h2 {
 }
 
 
-
 // BACKGROUNDS
 
 .colorSection {
-    // background: #9EC39E;
     background: url(images/greenBackground.jpg);
     background-size: cover;
     h2 {
@@ -57,9 +57,7 @@ h2 {
     }
 }
 
-
 .numberSection {
-    // background: #A8BDCD;
     background: url(images/blueBackground.jpg);
     background-size: cover;
     h2 {
@@ -68,7 +66,6 @@ h2 {
 }
 
 .tabSection {
-    // background: #ffaeae;
     background: url(images/redBackground.jpg);
     background-size: cover;
     h2 {
@@ -77,7 +74,6 @@ h2 {
 }
 
 .answerSection {
-    // #F3D491
     background: url(images/yellowBackground.jpg);
     background-size: cover;
     .userQuestion {
@@ -98,12 +94,6 @@ footer {
 }
 
 // MEDIA QUERIES START HERE
-
-
-
-// @media(max-height: 600px) {
-    
-// }
 
 @media(max-width: 880px) {
     h2 {

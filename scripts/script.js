@@ -75,7 +75,7 @@ cootieCatcher.restart = function () {
         }, 1000, function () {
                 location.hash = ``;
                 location.reload();
-                $(`:text`).val(``);
+                $(`textarea`).val(``);
         });
     }
 )};
@@ -129,11 +129,15 @@ cootieCatcher.printQuestion = function (userQuestion) {
 
 // REFRESH FUNCTION TO CLEAR OUT HASH DEFINED HERE
 cootieCatcher.clearHash = function () {
-    $(window).unload(function () {
-        window.location.hash = ``;
-    });
+    window.addEventListener('load', () => {
+        $(`html`).animate({
+            scrollTop: $(`#startSection`).offset().top
+        }, 1000, function () {
+            location.hash = ``;
+            $(`textarea`).val(``);
+        });
+    })
 }
-
 
 
 // INIT FUNCTION DEFINED HERE
@@ -150,7 +154,6 @@ cootieCatcher.init = function () {
 }
 
 // DOCUMENT READY
-
 $(document).ready(function() {
     cootieCatcher.init();
     

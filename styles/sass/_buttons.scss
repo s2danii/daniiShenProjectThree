@@ -1,5 +1,6 @@
+// STYLING FOR BUTTONS AND FORMS
 
-.startButton, .restartButton, .startButtonMobile {
+.startButton, .restartButton {
     padding: 20px;
     display: inline-block;
     color: #333333;
@@ -26,31 +27,24 @@ a:focus {
     background: #CAD7E1;
 }
 
-.mobileButton {
-    display: none;
-}
-
 .startButton span {
     color: #6b6b6b
 }
-
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     input {
         text-transform: uppercase;
-        
     }
-    
 }
-
-
 
 textarea {
     text-transform: uppercase;
     width: 70%;
+    height: 50px;
     min-width: 400px;
     margin-bottom: 20px;
     text-align: center;
@@ -58,26 +52,16 @@ textarea {
     display: block;
 }
 
-// input[type=text] {
-//     width: 70%;
-//     min-width: 400px;
-//     margin-bottom: 20px;
-//     text-align: center;
-//     padding: 10px;
-    
-// }
+textarea:focus {
+    border: 2px solid #7DA9CA;
+}
 
 
 // MEDIA QUERIES START HERE
-
-@media (max-height: 440px) {
-    // .mobileButton {
-    //     display: inline-block;
-    // }
-
-    // form {
-    //     display: none;
-    // }
+@media(max-height: 450px) {
+    .startButton, .restartButton {
+        padding: 15px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -91,7 +75,6 @@ textarea {
     .startButton, .restartButton {
         padding: 15px;
     }
-
 }
 
 

@@ -2,7 +2,6 @@
 
 // GENERAL SQUARE STYLING STARTS HERE
 
-
 .cootieCatcher {
     display:flex;
     flex-wrap: wrap;
@@ -10,7 +9,6 @@
     height: 700px;
     margin: 0 auto;
     
-
     li {
         width: calc(50% - 16px);
         height: calc(50% - 16px);
@@ -18,7 +16,6 @@
         background:$offWhite;
         box-shadow: $dropShadow;
         
-    
         a {
             width: 100%;
             height: 100%;
@@ -56,8 +53,6 @@
     @include colorCircle(#FF5D5D);
 }
 
-// NUMBER SQUARES STYLING STARTS HERE
-
 a {
     text-decoration: none;
 }
@@ -74,6 +69,7 @@ a {
     margin: 0 auto;
     margin-bottom: -20px;
     padding: 30px 5px;
+    
     .resultHeading {
         margin-bottom: 20px;
         font-weight: normal;
@@ -100,11 +96,11 @@ a {
     }
 }
 
-
 @media (max-height: 600px) {
     .cootieCatcher {
         width: 400px;
         height: 400px;
+        
         li a {
             font-size: 2.5rem;
         }
@@ -141,11 +137,11 @@ a {
     }
 }
 
-
 @media(max-width: 500px) {
     .cootieCatcher {
         width: 285px;
         height: 285px;
+        
         li a {
             font-size: 1.8rem;
         }

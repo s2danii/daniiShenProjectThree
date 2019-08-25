@@ -353,6 +353,12 @@ h1 span::before {
   }
 }
 
+@media (max-height: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 780px) and (min-height: 500px) {
   h1 {
     width: 100%;
@@ -369,11 +375,11 @@ h1 span::before {
 
 @media (max-width: 380px) {
   h1 {
-    padding: 10vh 0 5vh;
+    padding: 8vh 0 5vh;
   }
 }
 
-.startButton, .restartButton, .startButtonMobile {
+.startButton, .restartButton {
   padding: 20px;
   display: inline-block;
   color: #333333;
@@ -401,10 +407,6 @@ a:focus {
   background: #CAD7E1;
 }
 
-.mobileButton {
-  display: none;
-}
-
 .startButton span {
   color: #6b6b6b;
 }
@@ -429,11 +431,22 @@ form input {
 textarea {
   text-transform: uppercase;
   width: 70%;
+  height: 50px;
   min-width: 400px;
   margin-bottom: 20px;
   text-align: center;
   padding: 10px;
   display: block;
+}
+
+textarea:focus {
+  border: 2px solid #7DA9CA;
+}
+
+@media (max-height: 450px) {
+  .startButton, .restartButton {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 500px) {

@@ -1,3 +1,5 @@
+// STYLING FOR HEADER STARTS HERE
+
 header {
     height: 100vh;
     
@@ -17,7 +19,6 @@ h1 {
         position: relative;
     }
 }
-
 
 h1 span::before {
     content: '';
@@ -61,7 +62,11 @@ h1 span::before {
     }
 }
 
-
+@media (max-height: 450px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
 
 // MAX WIDTH
 
@@ -81,7 +86,7 @@ h1 span::before {
 
 @media(max-width: 380px) {
     h1 {
-        padding: 10vh 0 5vh;
+        padding: 8vh 0 5vh;
         
     }
 }
