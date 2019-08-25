@@ -434,6 +434,15 @@ input[type=text] {
   padding: 10px;
 }
 
+@media (max-height: 440px) {
+  .mobileButton {
+    display: inline-block;
+  }
+  form {
+    display: none;
+  }
+}
+
 @media (max-width: 500px) {
   .mobileButton {
     display: inline-block;

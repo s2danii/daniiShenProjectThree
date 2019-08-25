@@ -57,6 +57,17 @@ input[type=text] {
 
 
 // MEDIA QUERIES START HERE
+
+@media (max-height: 440px) {
+    .mobileButton {
+        display: inline-block;
+    }
+
+    form {
+        display: none;
+    }
+}
+
 @media(max-width: 500px) {
     .mobileButton {
         display: inline-block;
