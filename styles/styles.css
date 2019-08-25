@@ -263,8 +263,9 @@ h2 {
   background-size: cover;
 }
 
-.answerSection h2 {
+.answerSection .userQuestion {
   background: #F3D491;
+  margin-bottom: 10%;
 }
 
 footer {
@@ -306,7 +307,7 @@ h1 {
   font-size: 4rem;
   width: 600px;
   margin: 0 auto;
-  padding: 20vh 0;
+  padding: 20vh 0 10vh;
   z-index: 10;
   position: relative;
 }
@@ -396,8 +397,50 @@ a:focus {
   background: #CAD7E1;
 }
 
+.button:focus {
+  background: #CAD7E1;
+}
+
+.mobileButton {
+  display: none;
+}
+
 .startButton span {
   color: #6b6b6b;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form input {
+  text-transform: uppercase;
+}
+
+input[type=text] {
+  width: 70%;
+  min-width: 400px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 500px) {
+  .mobileButton {
+    display: inline-block;
+  }
+  form {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
@@ -483,7 +526,7 @@ a {
           box-shadow: 5px 5px 2px #999999;
   margin: 0 auto;
   margin-bottom: -20px;
-  padding: 30px;
+  padding: 30px 5px;
 }
 
 .answerSquare .resultHeading {
@@ -550,6 +593,12 @@ a {
   }
   .cootieCatcher li a {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .answerSquare h3 {
+    font-size: 1rem;
   }
 }
 

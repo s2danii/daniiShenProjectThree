@@ -80,8 +80,9 @@ h2 {
     // #F3D491
     background: url(images/yellowBackground.jpg);
     background-size: cover;
-    h2 {
+    .userQuestion {
         background: $yellow;
+        margin-bottom: 10%;
     }
 }
 

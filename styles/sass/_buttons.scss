@@ -22,8 +22,49 @@ a:focus {
     background: #CAD7E1;
 }
 
+.button:focus {
+    background: #CAD7E1;
+}
+
+.mobileButton {
+    display: none;
+}
+
 .startButton span {
     color: #6b6b6b
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        text-transform: uppercase;
+        
+    }
+    
+}
+
+input[type=text] {
+    width: 70%;
+    min-width: 400px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+
+// MEDIA QUERIES START HERE
+@media(max-width: 500px) {
+    .mobileButton {
+        display: inline-block;
+    }
+
+    form {
+        display: none;
+    }
 }
 
 @media(max-width: 320px) {
