@@ -367,9 +367,9 @@ h1 span::before {
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
   h1 {
-    padding-top: 10vh;
+    padding: 10vh 0 5vh;
   }
 }
 
@@ -426,33 +426,24 @@ form input {
   text-transform: uppercase;
 }
 
-input[type=text] {
+textarea {
+  text-transform: uppercase;
   width: 70%;
   min-width: 400px;
   margin-bottom: 20px;
   text-align: center;
   padding: 10px;
-}
-
-@media (max-height: 440px) {
-  .mobileButton {
-    display: inline-block;
-  }
-  form {
-    display: none;
-  }
+  display: block;
 }
 
 @media (max-width: 500px) {
-  .mobileButton {
-    display: inline-block;
-  }
-  form {
-    display: none;
+  textarea {
+    min-width: 90%;
+    height: 70px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .startButton, .restartButton {
     padding: 15px;
   }

@@ -79,9 +79,9 @@ h1 span::before {
     }
 }
 
-@media(max-width: 340px) {
+@media(max-width: 380px) {
     h1 {
-        padding-top: 10vh;
+        padding: 10vh 0 5vh;
         
     }
 }

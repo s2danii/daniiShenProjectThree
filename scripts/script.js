@@ -107,7 +107,7 @@ cootieCatcher.startGame = function () {
     $(`form`).on(`submit`, function (event) {
         event.preventDefault();
         const locationHash = $(`:submit`).data(`hash`);
-        let userQuestion = $(`input`).val();
+        let userQuestion = $(`textarea`).val();
         // console.log(userQuestion);
         // console.log(locationHash);
         $(`html`).animate({
